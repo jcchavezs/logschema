@@ -1,0 +1,15 @@
+language: go
+
+go:
+- '1.11'
+
+install:
+  - go get golang.org/x/lint/golint
+
+script:
+  - golint $(go list ./... | grep -v /vendor/)
+
+after_success:
+  - ls -la
+  - test -n "$TRAVIS_TAG" && GITHUB_TOKEN=${GITHUB_TOKEN} curl -sL https://git.io/goreleaser | bash
+  - ls -la

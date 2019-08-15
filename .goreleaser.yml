@@ -1,0 +1,12 @@
+builds:
+  - binary: logschema
+  - main: cmd/logschema/main.go
+    goos:
+      - windows
+      - darwin
+      - linux
+archive:
+  wrap_in_directory: true
+  format_overrides:
+    - goos: windows
+      format: zip
