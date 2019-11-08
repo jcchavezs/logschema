@@ -1,12 +1,16 @@
+project_name: logschema
+
 builds:
-  - binary: logschema
-  - main: cmd/logschema/main.go
+  - id: cli
+    binary: logschema
+    main: cmd/logschema/main.go
     goos:
       - windows
       - darwin
       - linux
-archive:
-  wrap_in_directory: true
-  format_overrides:
-    - goos: windows
-      format: zip
+archives:
+  - id: cli
+    wrap_in_directory: true
+    format_overrides:
+      - goos: windows
+        format: zip
