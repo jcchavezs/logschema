@@ -5,8 +5,8 @@ A tool for making sure log entries fulfill a given json schema.
 ## Installation
 
 ```bash
-go get github.com/Typeform/logschema/...
-go install github.com/Typeform/logschema/cmd/logschema
+go get github.com/jcchavezs/logschema/...
+go install github.com/jcchavezs/logschema/cmd/logschema
 ```
 
 ## Usage
